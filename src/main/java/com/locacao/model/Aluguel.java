@@ -15,27 +15,27 @@ import jakarta.persistence.ManyToOne;
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Integer id_aluguel;
+    private Integer idAluguel;
 
-    private Integer data_inicio;
-    private Integer data_fim;
+    private Integer dataInicio;
+    private Integer dataFim;
 
     @Column(precision = 10, scale = 2)
-    private BigDecimal valor_mensal;
+    private BigDecimal valorMensal;
 
-    private Boolean seguro_incendio;
+    private Boolean seguroIncendio;
 
     @Column(length = 500)
-    private String contrato_aluguel;
+    private String contratoAluguel;
 
     @Column(length = 150)
-    private String nome_fiador;
+    private String nomeFiador;
 
     @Column(length = 150)
-    private String cpf_fiador;
+    private String cpfFiador;
 
     @Column(precision = 10, scale = 2)
-    private BigDecimal valor_seguro_incedio;
+    private BigDecimal valorSeguroIncedio;
 
     @ManyToOne
     @JoinColumn(name = "id_cliente", nullable = false)
@@ -46,39 +46,39 @@ import jakarta.persistence.ManyToOne;
     private Imovel imovel;
 
     public void setId_aluguel(Integer id_aluguel) {
-        this.id_aluguel = id_aluguel;
+        this.idAluguel = idAluguel;
     }
 
     public void setData_inicio(Integer data_inicio) {
-        this.data_inicio = data_inicio;
+        this.dataInicio = dataInicio;
     }
 
     public void setData_fim(Integer data_fim) {
-        this.data_fim = data_fim;
+        this.dataFim = dataFim;
     }
 
     public void setValor_mensal(BigDecimal valor_mensal) {
-        this.valor_mensal = valor_mensal;
+        this.valorMensal = valorMensal;
     }
 
     public void setSeguro_incendio(Boolean seguro_incendio) {
-        this.seguro_incendio = seguro_incendio;
+        this.seguroIncendio = seguroIncendio;
     }
 
     public void setContrato_aluguel(String contrato_aluguel) {
-        this.contrato_aluguel = contrato_aluguel;
+        this.contratoAluguel = contratoAluguel;
     }
 
     public void setNome_fiador(String nome_fiador) {
-        this.nome_fiador = nome_fiador;
+        this.nomeFiador = nomeFiador;
     }
 
     public void setCpf_fiador(String cpf_fiador) {
-        this.cpf_fiador = cpf_fiador;
+        this.cpfFiador = cpfFiador;
     }
 
     public void setValor_seguro_incedio(BigDecimal valor_seguro_incedio) {
-        this.valor_seguro_incedio = valor_seguro_incedio;
+        this.valorSeguroIncedio = valorSeguroIncedio;
     }
 
     public void setCliente(Cliente cliente) {

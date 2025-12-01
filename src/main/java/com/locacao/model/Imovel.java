@@ -11,7 +11,7 @@ public class Imovel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_imovel;
+    private Integer idImovel;
 
     @Column(nullable = false, length = 150)
     private String endereco;
@@ -21,11 +21,11 @@ public class Imovel {
 
     private Short quartos;
     private Short banheiros;
-    private short vagas;
+    private Short vagas;
     private Boolean mobilia;
     
     public void setId_imovel(Integer id_imovel) {
-        this.id_imovel = id_imovel;
+        this.idImovel = idImovel;
     }
     public void setEndereco(String endereco) {
         this.endereco = endereco;
