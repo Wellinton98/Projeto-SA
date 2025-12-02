@@ -13,7 +13,7 @@ public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id_cliente;
+    private Integer idCliente;
 
     @Column(nullable = false, length = 150)
     private String name;
@@ -30,7 +30,7 @@ public class Cliente {
     private String telefone;
 
     public void setId_cliente(Integer id_cliente) { 
-        this.id_cliente = id_cliente; }
+        this.idCliente = idCliente; }
 
     public void setName(String name) { 
         this.name = name; }
