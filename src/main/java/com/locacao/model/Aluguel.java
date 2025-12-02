@@ -38,11 +38,11 @@ import jakarta.persistence.ManyToOne;
     private BigDecimal valorSeguroIncedio;
 
     @ManyToOne
-    @JoinColumn(name = "id_cliente", nullable = false)
+    @JoinColumn(name = "idCliente", nullable = false)
     private Cliente cliente;
 
     @ManyToOne
-    @JoinColumn(name = "imovel_idImovel", nullable = false)
+    @JoinColumn(name = "imovelIdImovel", nullable = false)
     private Imovel imovel;
 
     public void setId_aluguel(Integer id_aluguel) {

@@ -13,7 +13,7 @@ public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer idCliente;
+    private Integer id_cliente;
 
     @Column(nullable = false, length = 150)
     private String name;
@@ -29,28 +29,22 @@ public class Cliente {
 
     private String telefone;
 
-    public void setId_cliente(Integer id_cliente) {
-        this.idCliente = idCliente;
-    }
+    public void setId_cliente(Integer id_cliente) { 
+        this.id_cliente = id_cliente; }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    public void setName(String name) { 
+        this.name = name; }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
+    public void setCpf(String cpf){ 
+        this.cpf = cpf; }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
+    public void setEndereco(String endereco) { 
+        this.endereco = endereco; }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    public void setEmail(String email) { 
+        this.email = email; }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
+    public void setTelefone(String telefone) { 
+        this.telefone = telefone; }
+
 }
-
