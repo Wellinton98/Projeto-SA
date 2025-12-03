@@ -8,15 +8,16 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "clientes")
+@Table(name = "cliente")
 public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_cliente")
     private Integer idCliente;
 
-    @Column(nullable = false, length = 150)
-    private String name;
+    @Column(name = "nome", nullable = false, length = 150)
+    private String nome;
 
     @Column(nullable = false, length = 14, unique = true)
     private String cpf;
@@ -27,24 +28,56 @@ public class Cliente {
     @Column(nullable = false, length = 150)
     private String email;
 
+    @Column(length = 20)
     private String telefone;
 
-    public void setId_cliente(Integer id_cliente) { 
-        this.idCliente = idCliente; }
+    // GETTERS
+    public Integer getIdCliente() {
+        return idCliente;
+    }
 
-    public void setName(String name) { 
-        this.name = name; }
+    public String getNome() {
+        return nome;
+    }
 
-    public void setCpf(String cpf){ 
-        this.cpf = cpf; }
+    public String getCpf() {
+        return cpf;
+    }
 
-    public void setEndereco(String endereco) { 
-        this.endereco = endereco; }
+    public String getEndereco() {
+        return endereco;
+    }
 
-    public void setEmail(String email) { 
-        this.email = email; }
+    public String getEmail() {
+        return email;
+    }
 
-    public void setTelefone(String telefone) { 
-        this.telefone = telefone; }
+    public String getTelefone() {
+        return telefone;
+    }
 
+    // SETTERS
+    public void setIdCliente(Integer idCliente) {
+        this.idCliente = idCliente;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
+    }
 }

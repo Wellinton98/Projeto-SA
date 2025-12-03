@@ -1,5 +1,6 @@
 package com.locacao.service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,17 @@ public class AluguelService {
 
     public Aluguel salvar(Aluguel aluguel) {
         return aluguelRepository.save(aluguel);
+    }
+
+    public List<Aluguel> listarAlugueisPorImovel(Integer idImovel) {
+        return aluguelRepository.findByImovelIdImovel(idImovel);
+    }
+
+    public boolean imovelDisponivel(Integer imovelId, LocalDate inicio, LocalDate fim) {
+
+        List<Aluguel> conflitos = aluguelRepository.verificarDisponibilidade(imovelId, inicio, fim);
+
+        return conflitos.isEmpty(); // se não tem conflito, está disponível
     }
 
     public List<Aluguel> listarTodos() {
