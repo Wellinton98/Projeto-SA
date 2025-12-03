@@ -37,6 +37,9 @@ public class AluguelController {
     public List<Aluguel> listarPorImovel(@PathVariable Integer idImovel) {
         return aluguelService.listarAlugueisPorImovel(idImovel);
     }
+    public Aluguel imovelNaoexisti(Integer id) {
+        return aluguelService.imovelNaoEncontrado(id);
+    }
 
     @GetMapping("/disponivel/{idImovel}")
     public boolean verificarDisponibilidade(

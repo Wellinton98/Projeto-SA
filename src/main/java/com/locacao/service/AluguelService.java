@@ -33,6 +33,9 @@ public class AluguelService {
     public List<Aluguel> listarTodos() {
         return aluguelRepository.findAll();
     }
+    public Aluguel imovelNaoEncontrado(Integer id) {
+        return aluguelRepository.findById(id).orElse(null);
+    }
 
     public Aluguel buscarPorId(Integer id) {
         return aluguelRepository.findById(id).orElse(null);

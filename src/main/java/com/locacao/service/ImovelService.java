@@ -17,6 +17,9 @@ public class ImovelService {
     public List<Imovel> listarTodos() {
         return imovelRepository.findAll();
     }
+    public List<Imovel> listarImoveisDisponiveis() {
+        return (List<Imovel>)(Object) imovelRepository.findByDisponivelTrue();
+    }
 
     public Imovel buscarPorId(Integer id) {
         return imovelRepository.findById(id).orElse(null);

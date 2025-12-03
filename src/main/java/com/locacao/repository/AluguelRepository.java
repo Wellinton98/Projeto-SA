@@ -17,6 +17,7 @@ public interface AluguelRepository extends JpaRepository<Aluguel, Integer> {
     boolean existsById(Integer id_aluguel);
 
     List<Aluguel> findByImovelIdImovel(Integer idImovel);
+    
 
     @Query("""
         SELECT a FROM Aluguel a
