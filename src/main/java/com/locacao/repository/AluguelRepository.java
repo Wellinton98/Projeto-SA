@@ -18,6 +18,7 @@ public interface AluguelRepository extends JpaRepository<Aluguel, Integer> {
 
     List<Aluguel> findByImovelIdImovel(Integer idImovel);
     
+    
 
     @Query("""
         SELECT a FROM Aluguel a

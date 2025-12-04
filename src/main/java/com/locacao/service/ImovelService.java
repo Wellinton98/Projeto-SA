@@ -24,6 +24,10 @@ public class ImovelService {
     public Imovel buscarPorId(Integer id) {
         return imovelRepository.findById(id).orElse(null);
     }
+    private Imovel descricao(String descricao) {
+        // TODO Auto-generated method stub
+        return null;
+    }
 
     public Imovel salvar(Imovel imovel) {
         return imovelRepository.save(imovel);

@@ -17,6 +17,8 @@ import jakarta.persistence.ManyToOne;
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer idAluguel;
 
+    private Boolean verificarDisponibilidade;
+
     private Integer dataInicio;
     private Integer dataFim;
 

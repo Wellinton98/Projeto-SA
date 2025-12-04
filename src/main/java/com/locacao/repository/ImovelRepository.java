@@ -11,5 +11,6 @@ public interface ImovelRepository extends JpaRepository<Imovel, Integer> {
 
     boolean existsById(Integer id_imovel);
     List<Object> findByDisponivelTrue();
+    
  
 }

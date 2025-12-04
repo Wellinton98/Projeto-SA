@@ -33,6 +33,9 @@ public class ImovelController {
     public List<Imovel> listarDisponiveis() {
         return imovelService.listarImoveisDisponiveis();
     }
+    private Imovel descricao(String descricao) {
+        return null;
+    }
 
     @GetMapping("/{id}")
     public Imovel buscar(@PathVariable Integer id) {
