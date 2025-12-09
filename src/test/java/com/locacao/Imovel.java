@@ -16,6 +16,17 @@ public class Imovel {
 
     public String descricao; // adicionado para o teste funcionar
 
+    public void setIdImovel(Integer idImovel) {
+        this.idImovel = idImovel;
+    }
+
+    public void setDisponivel(Boolean disponivel) {
+        this.disponivel = disponivel;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
 
 }
 

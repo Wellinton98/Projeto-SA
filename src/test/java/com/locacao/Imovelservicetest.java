@@ -66,13 +66,13 @@ public class Imovelservicetest {
     }
     @Test
 void testBuscarPorIdInexistenteDeveLancarExcecao() {
-    // Arrange
+
     Integer id = 999;
 
     when(imovelRepository.findById(id))
             .thenReturn(Optional.empty()); // O repositório não encontrou nada
 
-    // Act + Assert
+    
     Imovel resultado = imovelService.buscarPorId(id);
     assertEquals(null, resultado
     );
@@ -91,13 +91,13 @@ class ClienteServiceTest {
 
     @Test
     void deveLancarExcecao_QuandoBuscarPorIdInexistente() {
-        // Arrange
+        
         Integer idInexistente = 999;
 
         Mockito.when(clienteRepository.findById(idInexistente))
                .thenReturn(Optional.empty());
 
-        // Act + Assert
+        
         Exception exception = assertThrows(RuntimeException.class, () -> {
             clienteService.buscarPorId(idInexistente);
         }
