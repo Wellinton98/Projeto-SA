@@ -18,8 +18,13 @@ public class ClienteService {
         return clienteRepository.findAll();
     }
 
-    public Cliente buscarPorId(Integer id) {
-        return clienteRepository.findById(id).orElse(null);
+    /*public Cliente buscarPorId(Integer id) {
+        return clienteRepository.findById(id).orElse(null);*/
+
+
+        public Cliente buscarPorId(Integer id) {
+    return clienteRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Cliente com ID " + id + " não encontrado."));
     }
 
     public Cliente salvar(Cliente cliente) {
@@ -35,7 +40,11 @@ public class ClienteService {
     }
 
     public void deletar(Integer id) {
-        clienteRepository.deleteById(id);
+    clienteRepository.findById(id)
+        .orElseThrow(() -> new RuntimeException("Cliente com ID " + id + " não encontrado."));
+
+    clienteRepository.deleteById(id);
+
     }
 }
 
